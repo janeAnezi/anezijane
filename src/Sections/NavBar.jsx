@@ -1,13 +1,20 @@
 import { useState } from 'react'
 import logo from '../../public/my-logo.png'
+import { navLinks } from '../constants';
 
 
 
 const NavItems = () => {
     return(
-        <div>
-            
-        </div>
+        <ul className='nav-ul'>
+            {navLinks.map(
+               ({id,title}) => (
+                <li key={id} className='nav-li'>
+                    <a href="/" className='nav-li_a'>{item}</a>
+                </li>
+               ) 
+            )}
+        </ul>
     )
 }
 
