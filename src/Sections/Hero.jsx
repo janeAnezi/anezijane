@@ -11,7 +11,7 @@ export default function Hero() {
         </div>
 
         <div className="w-full h-full absolute inset-0">
-
+                
         </div>
       
     </section>
