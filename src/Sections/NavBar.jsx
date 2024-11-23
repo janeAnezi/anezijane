@@ -8,9 +8,9 @@ const NavItems = () => {
     return(
         <ul className='nav-ul'>
             {navLinks.map(
-               ({id,title}) => (
-                <li key={id} className='nav-li'>
-                    <a href="/" className='nav-li_a'>{item}</a>
+               ({id,name, href}) => (
+                <li key={id} className='text-neutral-400 hover:text-white font-sans sm:hover:bg-black-500 sm:w-full sm:rounded-md py-2 sm:px-5'>
+                    <a href={href} className='nav-li_a'>{name}</a>
                 </li>
                ) 
             )}
@@ -43,7 +43,6 @@ export default function NavBar() {
 
                 <nav className='sm:flex hidden'>
                     <NavItems />
-
                 </nav>
 
             </div>
