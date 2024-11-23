@@ -24,35 +24,27 @@ export default function Hero() {
             max: 10
         },
         rotationX: {
-            value: 2.5,
+            value: 0,
             min: -10,
             max: 10
         },
         rotationY: {
-            value: 2.5,
+            value: 0,
             min: -10,
             max: 10
         },
         rotationZ: {
-            value: 2.5,
+            value: 0,
             min: -10,
             max: 10
         },
-        scaleX: {
-            value: 2.5,
-            min: -10,
+        scale: {
+            value: 1,
+            min: 0.1,
             max: 10
         },
-        scaleY: {
-            value: 2.5,
-            min: -10,
-            max: 10
-        },
-        scaleZ: {
-            value: 2.5,
-            min: -10,
-            max: 10
-        },
+       
+       
     })
   return (
     <section className='min-h-screen w-full flex flex-col relative pt-5'>
@@ -73,7 +65,7 @@ export default function Hero() {
                     //   position={[0,0,0]} rotation={[0,280,0]}
                      position={[x.positionX, x.positionY, x.positionZ]} 
                      rotation={[x.rotationX, x.rotationY, x.rotationZ]}
-                      scale={[x.scaleX, x.scaleY, x.scaleZ]}
+                      scale={[x.scale, x.scale, x.scale]}
                       />
                     
                     <ambientLight  intensity={1}/>
