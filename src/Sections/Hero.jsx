@@ -63,9 +63,9 @@ export default function Hero() {
                     <HackerRoom
                     //  scale={0.09}
                     //   position={[0,0,0]} rotation={[0,280,0]}
-                     position={[x.positionX, x.positionY, x.positionZ]} 
-                     rotation={[x.rotationX, x.rotationY, x.rotationZ]}
-                      scale={[x.scale, x.scale, x.scale]}
+                     position={[2, -8, 2]} 
+                     rotation={[0, -Math.PI, 0]}
+                      scale={0.1}
                       />
                     
                     <ambientLight  intensity={1}/>
