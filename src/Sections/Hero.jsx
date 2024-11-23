@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { PerspectiveCamera } from '@react-three/drei'
+import HackerRoom from '../Components/HackerRoom'
 
 export default function Hero() {
   return (
@@ -11,7 +14,15 @@ export default function Hero() {
         </div>
 
         <div className="w-full h-full absolute inset-0">
-                
+            <Canvas className='w-full h-full'>
+                <Suspense fallback={null}>
+                    
+                </Suspense>
+
+                <PerspectiveCamera makeDefault position={[0,0,30]} />
+                <HackerRoom />
+            </Canvas>
+
         </div>
       
     </section>
