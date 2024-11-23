@@ -4,6 +4,7 @@ import { PerspectiveCamera } from '@react-three/drei'
 import HackerRoom from '../Components/HackerRoom'
 import CanvasLoader from '../Components/CanvasLoader'
 import { Leva, useControls } from 'leva'
+import { useMediaQuery } from 'react-responsive'
 
 export default function Hero() {
     const x = useControls
@@ -46,6 +47,12 @@ export default function Hero() {
        
        
     })
+    const isMobile = useMediaQuery({maxWidth: 768})
+    const isSmall = useMediaQuery({maxWidth: 440})
+    const isTablet = useMediaQuery({minWidth: 768, maxWidth: 1024})
+
+    const sizes = calculateSizes(isSmall, isMobile, isTablet);
+    
   return (
     <section className='min-h-screen w-full flex flex-col relative pt-5'>
         <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
@@ -59,13 +66,13 @@ export default function Hero() {
             <Leva />
             <Canvas className='w-full h-full mt-56'>
                 <Suspense fallback={ <CanvasLoader />}>
-                    <PerspectiveCamera makeDefault position={[0,0,30]} />
+                    <PerspectiveCamera makeDefault position={[0,0,20]} />
                     <HackerRoom
                     //  scale={0.09}
                     //   position={[0,0,0]} rotation={[0,280,0]}
                      position={[2, -8, 2]} 
                      rotation={[0, -Math.PI, 0]}
-                      scale={0.1}
+                      scale={isMobile ? 0.09 : 0.1}
                       />
                     
                     <ambientLight  intensity={1}/>
