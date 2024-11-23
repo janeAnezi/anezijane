@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logo from '../../public/my-logo.png'
+import logo from '/my-logo.png'
 import { navLinks } from '../constants';
 
 
@@ -37,7 +37,7 @@ export default function NavBar() {
                 </a>
 
                 <button onClick={toggleMenu} className='text-neutral-400 font-bold text-xl hover:text-white focus:outline-none sm:hidden flex' aria-label='Toggle menu'>
-                    <img src={isOpen ? 'public/assets/close.svg' : 'public/assets/menu.svg'} alt="menu icon toggle" className='w-6 h-6'/>
+                    <img src={isOpen ? '/assets/close.svg' : '/assets/menu.svg'} alt="menu icon toggle" className='w-6 h-6'/>
                 </button>
 
 
@@ -46,6 +46,13 @@ export default function NavBar() {
                 </nav>
 
             </div>
+        </div>
+
+        <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
+            <nav className="p-5">
+                <NavItems />
+            </nav>
+
         </div>
     </header>
   )
