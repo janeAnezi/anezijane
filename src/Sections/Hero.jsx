@@ -6,6 +6,7 @@ import CanvasLoader from '../Components/CanvasLoader'
 import { useMediaQuery } from 'react-responsive'
 import Target from '../Components/Target'
 import { calculateSizes } from '../constants'
+import ReactLogo from '../Components/ReactLogo'
 
 export default function Hero() {
     // const x = useControls
@@ -75,6 +76,8 @@ export default function Hero() {
 
                     <group> 
                         <Target position={sizes.targetPosition}/>
+                        <ReactLogo  position={sizes.reactLogoPosition}/>
+                        
                     </group>
                     
                     <ambientLight  intensity={1}/>
