@@ -4,6 +4,7 @@ import { PerspectiveCamera } from '@react-three/drei'
 import HackerRoom from '../Components/HackerRoom'
 import CanvasLoader from '../Components/CanvasLoader'
 import { useMediaQuery } from 'react-responsive'
+import Target from '../Components/Target'
 import { calculateSizes } from '../constants'
 
 export default function Hero() {
@@ -71,6 +72,10 @@ export default function Hero() {
                      rotation={[0, -Math.PI, 0]}
                       scale={sizes.deskScale}
                       />
+
+                    <group> 
+                        <Target position={sizes.targetPosition}/>
+                    </group>
                     
                     <ambientLight  intensity={1}/>
                     <directionalLight position={[10,10,10]} intensity={0.5} />
