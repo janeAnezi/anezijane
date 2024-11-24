@@ -8,6 +8,7 @@ import Target from '../Components/Target'
 import { calculateSizes } from '../constants'
 import ReactLogo from '../Components/ReactLogo'
 import Cube from '../Components/Cube'
+import Rings from '../Components/Rings'
 
 export default function Hero() {
     // const x = useControls
@@ -79,6 +80,7 @@ export default function Hero() {
                         <Target position={sizes.targetPosition}/>
                         <ReactLogo  position={sizes.reactLogoPosition}/>
                         <Cube position={sizes.cubePosition}/>
+                        <Rings  position={sizes.ringPosition}/>
                     </group>
                     
                     <ambientLight  intensity={1}/>
