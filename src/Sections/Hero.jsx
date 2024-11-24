@@ -3,51 +3,50 @@ import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 import HackerRoom from '../Components/HackerRoom'
 import CanvasLoader from '../Components/CanvasLoader'
-import { Leva, useControls } from 'leva'
 import { useMediaQuery } from 'react-responsive'
 import { calculateSizes } from '../constants'
 
 export default function Hero() {
-    const x = useControls
-    ('HackerRoom', {
-        positionX: {
-            value: 2.5,
-            min: -10,
-            max: 10
-        },
-        positionY: {
-            value: 2.5,
-            min: -10,
-            max: 10
-        },
-        positionZ: {
-            value: 2.5,
-            min: -10,
-            max: 10
-        },
-        rotationX: {
-            value: 0,
-            min: -10,
-            max: 10
-        },
-        rotationY: {
-            value: 0,
-            min: -10,
-            max: 10
-        },
-        rotationZ: {
-            value: 0,
-            min: -10,
-            max: 10
-        },
-        scale: {
-            value: 1,
-            min: 0.1,
-            max: 10
-        },
+    // const x = useControls
+    // ('HackerRoom', {
+    //     positionX: {
+    //         value: 2.5,
+    //         min: -10,
+    //         max: 10
+    //     },
+    //     positionY: {
+    //         value: 2.5,
+    //         min: -10,
+    //         max: 10
+    //     },
+    //     positionZ: {
+    //         value: 2.5,
+    //         min: -10,
+    //         max: 10
+    //     },
+    //     rotationX: {
+    //         value: 0,
+    //         min: -10,
+    //         max: 10
+    //     },
+    //     rotationY: {
+    //         value: 0,
+    //         min: -10,
+    //         max: 10
+    //     },
+    //     rotationZ: {
+    //         value: 0,
+    //         min: -10,
+    //         max: 10
+    //     },
+    //     scale: {
+    //         value: 1,
+    //         min: 0.1,
+    //         max: 10
+    //     },
        
        
-    })
+    // })
     const isMobile = useMediaQuery({maxWidth: 768})
     const isSmall = useMediaQuery({maxWidth: 440})
     const isTablet = useMediaQuery({minWidth: 768, maxWidth: 1024})
@@ -64,14 +63,11 @@ export default function Hero() {
         </div>
 
         <div className="w-full h-full absolute inset-0">
-            <Leva />
-            <Canvas className='w-full h-full mt-56'>
+            <Canvas className='w-full h-full mt-40'>
                 <Suspense fallback={ <CanvasLoader />}>
-                    <PerspectiveCamera makeDefault position={[0,0,20]} />
+                    <PerspectiveCamera makeDefault position={[0,0,15]} />
                     <HackerRoom
-                    //  scale={0.09}
-                    //   position={[0,0,0]} rotation={[0,280,0]}
-                     position={[2, -8, 2]} 
+                     position={sizes.deskPosition} 
                      rotation={[0, -Math.PI, 0]}
                       scale={sizes.deskScale}
                       />
