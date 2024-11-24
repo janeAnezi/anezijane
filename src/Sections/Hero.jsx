@@ -7,6 +7,7 @@ import { useMediaQuery } from 'react-responsive'
 import Target from '../Components/Target'
 import { calculateSizes } from '../constants'
 import ReactLogo from '../Components/ReactLogo'
+import Cube from '../Components/Cube'
 
 export default function Hero() {
     // const x = useControls
@@ -77,7 +78,7 @@ export default function Hero() {
                     <group> 
                         <Target position={sizes.targetPosition}/>
                         <ReactLogo  position={sizes.reactLogoPosition}/>
-                        
+                        <Cube position={sizes.cubePosition}/>
                     </group>
                     
                     <ambientLight  intensity={1}/>
