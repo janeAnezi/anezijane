@@ -89,13 +89,16 @@ export default function Hero() {
                     
                     <ambientLight  intensity={1}/>
                     <directionalLight position={[10,10,10]} intensity={0.5} />
-                </Suspense>
-
-                
+                </Suspense> 
             </Canvas>
+        </div>
+
+        <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+            <a href="#contact" className='w-fit'>
+                {/* <Button></Button> */}
+            </a>
 
         </div>
-      
     </section>
   )
 }
