@@ -10,6 +10,7 @@ import ReactLogo from '../Components/ReactLogo'
 import Cube from '../Components/Cube'
 import Rings from '../Components/Rings'
 import HeroCamera from '../Components/HeroCamera'
+import Button from '../Components/Button'
 
 export default function Hero() {
     // const x = useControls
@@ -93,9 +94,9 @@ export default function Hero() {
             </Canvas>
         </div>
 
-        <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <div className="absolute -bottom-40 left-0 right-0 w-full z-10 c-space mt-10">
             <a href="#contact" className='w-fit'>
-                {/* <Button></Button> */}
+                <Button name="Let's  work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96 " />
             </a>
 
         </div>
