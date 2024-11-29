@@ -94,11 +94,10 @@ export default function Hero() {
             </Canvas>
         </div>
 
-        <div className="absolute -bottom-40 left-0 right-0 w-full z-10 c-space mt-10">
-            <a href="#contact" className='w-fit'>
-                <Button name="Let's  work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96 " />
+        <div className="absolute -bottom-64 left-0 right-0 w-full z-10 c-space">
+            <a href="#about" className="w-fit">
+            <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
             </a>
-
         </div>
     </section>
   )
