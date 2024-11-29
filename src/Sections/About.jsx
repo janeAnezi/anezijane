@@ -39,8 +39,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
-                I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
-                applications
+                I specialize in Javascript with a focus on React and Next.js ecosystems building robust and scalable applications.
               </p>
             </div>
           </div>
@@ -63,7 +62,7 @@ const About = () => {
             </div>
             <div>
               <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
-              <p className="grid-subtext">I&apos;m based in Rjieka, Croatia and open to remote work worldwide.</p>
+              <p className="grid-subtext">I&apos;m based in Abuja, Nigeria and open to remote work worldwide.</p>
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
