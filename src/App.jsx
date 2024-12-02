@@ -1,6 +1,7 @@
 import About from "./Sections/About"
 import Hero from "./Sections/Hero"
 import NavBar from "./Sections/NavBar"
+import Projects from "./Sections/Projects"
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
       <NavBar />
       <Hero />
       <About />
+      <Projects />
     </main>
   )
 }
