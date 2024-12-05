@@ -99,7 +99,7 @@ body {
   }
 
   .client-review {
-    @apply rounded-lg md:p-10 p-5 col-span-1 bg-black-300 bg-opacity-50;
+    @apply rounded-lg md:p-10 p-5 col-span-1 bg-slate-900 bg-opacity-50;
   }
 
   .client-content {
