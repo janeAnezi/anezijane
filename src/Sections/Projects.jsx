@@ -43,10 +43,10 @@ const Projects = () => {
             <img className="w-10 h-10 shadow-sm" src={currentProject.logo} alt="logo" />
           </div>
 
-          <div className="flex flex-col gap-5 text-white-600 my-5">
-            <p className="text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
+          <div className="flex flex-col gap-5 text-slate-400 my-5">
+            <p className=" text-2xl font-semibold animatedText">{currentProject.title}</p>
 
-            <p className="animatedText">{currentProject.desc}</p>
+            <p className="animatedText ">{currentProject.desc}</p>
             <p className="animatedText">{currentProject.subdesc}</p>
           </div>
 
@@ -60,7 +60,7 @@ const Projects = () => {
             </div>
 
             <a
-              className="flex items-center gap-2 cursor-pointer text-white-600"
+              className="flex items-center gap-2 cursor-pointer text-slate-400"
               href={currentProject.href}
               target="_blank"
               rel="noreferrer">
