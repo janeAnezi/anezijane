@@ -12,12 +12,38 @@ export default function Contact() {
         message: ""
     })
 
-    const handleChange = ({name, value}) => {
-        setForm({...form, [name]: value})
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm({ ...form, [name]: value });
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
+        setLoading(true)
+
+        try {
+            await emailjs.send(
+                'service_dssno1y',
+                'template_dc3kyen',
+                 {
+                    from_name: form.name,
+                    to_name: 'Anezi',
+                    from_email: form.email,
+                    to_email: 'ahnnieanezi@gmail.com',
+                    message: form.message
+                },
+                 "r5oe7VcboZl5t6Qpl"
+            )
+            setLoading(false)
+            alert('Your message has been sent!')
+            setForm({ name: "", email: "", message: "" });
+            formRef.current.reset();
+        } catch (error) {
+            setLoading(false)
+            console.log(error);
+            alert('Something went wrong!')
+        }
+       
         
     }
 
