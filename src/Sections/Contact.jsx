@@ -1,4 +1,5 @@
 import { useRef, useState } from "react"
+import emailjs from '@emailjs/browser'
 
 
 export default function Contact() {
@@ -11,8 +12,14 @@ export default function Contact() {
         message: ""
     })
 
-    const handleChange = () => {}
-    const handleSubmit = () => {}
+    const handleChange = ({name, value}) => {
+        setForm({...form, [name]: value})
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        
+    }
 
   return (
     <section className="c-space my-20" id="contact">
