@@ -39,7 +39,36 @@ export default function Contact() {
                     />
 
                     </label>
+                    <label className="space-y-3">
+                    <span className="field-label">Email</span>
+                    <input
+                        type="email"
+                        name="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        required
+                        placeholder="janedoe@gmail.com"
+                        className="field-input"
+                    />
 
+                    </label>
+                    <label className="space-y-3">
+                    <span className="field-label">Message</span>
+                    <textarea
+                        name="message"
+                        value={form.message}
+                        onChange={handleChange}
+                        required
+                        placeholder="Hi, I would like to offer you ..."
+                        className="field-input"
+                        rows={5}
+                    />
+                    </label>
+
+                    <button className="field-btn" type="submit" disabled={loading}>
+                        {loading ? 'sending ...' : "Send Message"}
+                        <img src="/assets/arrow-up.png" alt="arrow-up" className="field-btn_arrow" />
+                    </button>
                 </form>
             </div>
         </div>
