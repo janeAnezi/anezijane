@@ -1,5 +1,9 @@
+emailjs.init('r5oe7VcboZl5t6Qpl')
+
 import { useRef, useState } from "react"
 import emailjs from '@emailjs/browser'
+
+
 
 
 export default function Contact() {
@@ -18,35 +22,36 @@ export default function Contact() {
     }
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
-        setLoading(true)
-
+        e.preventDefault();
+        setLoading(true);
+    
+        console.log('Form data:', form);    
         try {
-            await emailjs.send(
+            const response = await emailjs.send(
                 'service_dssno1y',
                 'template_dc3kyen',
-                 {
+                {
                     from_name: form.name,
                     to_name: 'Anezi',
                     from_email: form.email,
                     to_email: 'ahnnieanezi@gmail.com',
-                    message: form.message
+                    message: form.message,
                 },
-                 "r5oe7VcboZl5t6Qpl"
-            )
-            setLoading(false)
-            alert('Your message has been sent!')
-            setForm({ name: "", email: "", message: "" });
+                "r5oe7VcboZl5t6Qpl"
+            );
+    
+            console.log('EmailJS Response:', response); 
+            setLoading(false);
+            alert('Your message has been sent!');
+            setForm({ name: '', email: '', message: '' });
             formRef.current.reset();
         } catch (error) {
-            setLoading(false)
-            console.log(error);
-            alert('Something went wrong!')
+            setLoading(false);
+            console.error('EmailJS Error:', error); 
+            alert('Something went wrong! Please check the console for more details.');
         }
-       
-        
-    }
-
+    };
+    
   return (
     <section className="c-space my-20" id="contact">
         <div className="relative min-h-screen flex items-center justify-center flex-col">
