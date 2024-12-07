@@ -5,6 +5,7 @@ import Projects from "./Sections/Projects"
 import Clients from "./Sections/Review"
 import Contact from "./Sections/Contact"
 import Footer from "./Sections/Footer"
+import Experience from "./Sections/Experience"
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <About />
       <Projects />
       <Clients />
+      <Experience/>
       <Contact />
       <Footer />
     </main>
