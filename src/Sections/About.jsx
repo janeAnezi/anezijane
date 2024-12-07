@@ -16,7 +16,7 @@ const About = () => {
   };
 
   return (
-    <section className="c-space mt-72" id="about">
+    <section className="c-space mt-72 py-20 h-screen" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
