@@ -25,11 +25,11 @@ export default function Contact() {
         e.preventDefault();
         setLoading(true);
     
-        console.log('Form data:', form);    
+        // console.log('Form data:', form);    
         try {
-            const response = await emailjs.send(
+            await emailjs.send(
                 'service_dssno1y',
-                'template_dc3kyen',
+                'template_5ahd0gn',
                 {
                     from_name: form.name,
                     to_name: 'Anezi',
@@ -39,15 +39,14 @@ export default function Contact() {
                 },
                 "r5oe7VcboZl5t6Qpl"
             );
-    
-            console.log('EmailJS Response:', response); 
+
             setLoading(false);
             alert('Your message has been sent!');
             setForm({ name: '', email: '', message: '' });
             formRef.current.reset();
         } catch (error) {
             setLoading(false);
-            console.error('EmailJS Error:', error); 
+            // console.error('EmailJS Error:', error); 
             alert('Something went wrong! Please check the console for more details.');
         }
     };
