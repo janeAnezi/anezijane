@@ -9,13 +9,13 @@ const Footer = () => {
   
         <div className="flex gap-3">
           <div className="social-icon">
-            <a href="https://github.com/janeAnezi" target="_blank" rel="noopener noreferrer" className="pl-4"><img src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" /></a>
+            <a href="https://github.com/janeAnezi" target="_blank" rel="noopener noreferrer" className="ml-2"><img src="/assets/github.svg" alt="github" className="w-3/4 h-3/4" /></a>
           </div>
           <div className="social-icon">
-            <a href="http://" target="_blank" rel="noopener noreferrer" className="pl-4"><img src="/assets/twittersvg.jpeg" alt="twitter" className="w-1/2 h-1/2 rounded-lg" /></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="/assets/twittersvg.jpeg" alt="twitter" className=" rounded-full p-3" /></a>
           </div>
           <div className="social-icon">
-            <a href="http://" target="_blank" rel="noopener noreferrer" className="pl-4"><img src="/assets/linkdinsvg.png" alt="instagram" className="w-1/2 h-1/2 rounded-lg" /></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="/assets/linkdinsvg.png" alt="instagram" className="rounded-full p-3" /></a>
           </div>
         </div>
   
