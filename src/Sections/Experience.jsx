@@ -11,7 +11,7 @@ export default function Experience() {
 
   return (
     <section className="c-space my-20" id="work">
-      <div className="w-full text-white-600">
+      <div className="w-full text-white">
         <p className="head-text">My Work Experience</p>
 
         <div className="work-container">
@@ -47,7 +47,7 @@ export default function Experience() {
 
                   <div className="sm:p-5 px-2.5 py-5">
                     <p className="font-bold text-white">{item.name}</p>
-                    <p className="text-sm mb-5">
+                    <p className="text-sm mb-5 text-slate-400">
                       {item.pos} -- <span>{item.duration}</span>
                     </p>
                     <p className="group-hover:text-white transition-all ease-in-out duration-500">{item.title}</p>
