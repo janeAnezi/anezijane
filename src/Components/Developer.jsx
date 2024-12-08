@@ -6,17 +6,20 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Developer(props) {
-  const { nodes, materials } = useGLTF('../../public/models/animations/developer.glb')
+    const group = useRef();
+  const { nodes, materials } = useGLTF('/models/animations/developer.glb')
 
-  const { animations: idleAnimation } = useFBX('/models/animations/idle.fbx'); 
+  const { animations: idleAnimation } = useFBX('/models/animations/catwalkidle.fbx'); 
   const { animations: saluteAnimation } = useFBX('/models/animations/salute.fbx');
   const { animations: clappingAnimation } = useFBX('/models/animations/clapping.fbx');
   const { animations: victoryAnimation } = useFBX('/models/animations/victory.fbx');
 
-  const {actions} = useAnimation()[0]
+  idleAnimation[0].name = 'idle';
+
+   const { actions } = useAnimations([idleAnimation[0]], group);
 
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} ref={group}>
       <primitive object={nodes.Hips} />
       <skinnedMesh
         name="EyeLeft"
